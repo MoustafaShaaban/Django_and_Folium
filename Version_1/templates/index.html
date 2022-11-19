@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Homepage{% endblock title %}
+
+{% block homepage %}
+<div class="list-group">
+    <a href="{% url 'schools-simple-markers' %}" class="list-group-item list-group-item-action active" aria-current="true">
+        Public Schools Simple Markers example
+    </a>
+    <a href="{% url 'schools-marker-cluster' %}" class="list-group-item list-group-item-action">
+        Public Schools Marker Cluster example
+    </a>
+</div>
+
+<hr>
+
+<div class="list-group">
+    <a href="{% url 'hospitals-simple-markers' %}" class="list-group-item list-group-item-action active" aria-current="true">
+        Hospitals Simple Markers example
+    </a>
+    <a href="{% url 'hospitals-marker-cluster' %}" class="list-group-item list-group-item-action">
+        Hospitals Marker Cluster example
+    </a>
+</div>
+
+<hr>
+
+<div class="list-group">
+    <a href="{% url 'libraries-simple-markers' %}" class="list-group-item list-group-item-action active" aria-current="true">
+        Libraries Simple Markers example
+    </a>
+    <a href="{% url 'libraries-marker-cluster' %}" class="list-group-item list-group-item-action">
+        Libraries Marker Cluster example
+    </a>
+</div>
+{% endblock homepage %}
+
+
+{% block carousel %}
+    <!-- Start Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active container">
+                <img src="{% static 'images/seattle_public_libraries_simple_markers.jpg' %}" class="container d-block w-70" alt="Folium Simple Markers">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="text-dark fs-1">Simple Markers</h5>
+                    <p class="text-dark fs-3">An Example of using Folium's Simple markers to visualize data returned from a Django Database.</p>
+                </div>
+            </div>
+            <div class="carousel-item container">
+                <img src="{% static 'images/seattle_public_libraries_marker_cluster.jpg' %}" class="container d-block w-70" alt="Folium Marker Cluster">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="text-dark fs-1">Markers Cluster</h5>
+                    <p class="text-dark fs-3">An Example of using Folium's Marker Cluster to visualize data returned from a Django Database.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- End Carousel -->
+{% endblock carousel %}
