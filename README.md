@@ -1,9 +1,16 @@
-# Django_and_Folium
+# django_and_folium
 
 
-This project is built using Django web framework and Folium library.
+###  Project Goals
 
-#### Data Sources
+* Use the power of Folium to visualize data generated from Django Database on a Leaflet JS map.
+
+* Use Django Admin Site to Import and Export data into and from the database.
+
+* Visualize data using Folium's Simple Markers and Marker Cluster.
+
+
+### Data Sources
 
 The data used in this project is downloaded from the [Seattle City Open Data](https://data-seattlecitygis.opendata.arcgis.com/) website, The following Datasets are used:
 
@@ -14,12 +21,12 @@ The data used in this project is downloaded from the [Seattle City Open Data](ht
 * [Public Libraries](https://data-seattlecitygis.opendata.arcgis.com/datasets/seattle-public-libraries/explore)
 
 
-#### Project Review
+### Project Review
 
 * [Youtube](https://www.youtube.com/watch?v=r08MujfgjoM)
 
 
-#### Libraries and Packages used
+### Libraries and Packages used
 
 * [Django Web Framework](https://www.djangoproject.com/)
 
@@ -28,9 +35,7 @@ The data used in this project is downloaded from the [Seattle City Open Data](ht
 * [Folium](https://python-visualization.github.io/folium/)
 
 
-#### To get started with this project
-
-To get started with the project:
+### To get started with this project
 
 * Clone the repository: git clone 'https://github.com/MoustafaShaaban/Django_and_Folium.git'
 
@@ -44,9 +49,9 @@ To get started with the project:
 
     * ``` venv/Scripts/activate ```         *On Windows*
 
-    * ``` sourcs venv/Scripts/activate ```  *Git Bash on WIndows*
+    * ``` sourcs venv/Scripts/activate ```  *Git Bash on Windows*
 
-* Install requirements.txt: python -m pip install -r requirements.txt
+* Install requirements.txt: ``` python -m pip install -r requirements.txt ```
 
 * Create the database and super user by running the following commands:
 ``` python manage.py migrate ```
