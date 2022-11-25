@@ -21,7 +21,7 @@ The data used in this project is downloaded from the [Seattle City Open Data](ht
 * [Public Libraries](https://data-seattlecitygis.opendata.arcgis.com/datasets/seattle-public-libraries/explore)
 
 
-### Project Review
+### Project Preview
 
 * [Youtube](https://www.youtube.com/watch?v=r08MujfgjoM)
 
