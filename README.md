@@ -49,7 +49,7 @@ The data used in this project is downloaded from the [Seattle City Open Data](ht
 
     * ``` venv/Scripts/activate ```         *On Windows*
 
-    * ``` sourcs venv/Scripts/activate ```  *Git Bash on Windows*
+    * ``` source venv/Scripts/activate ```  *Git Bash on Windows*
 
 * Install requirements.txt: ``` python -m pip install -r requirements.txt ```
 
