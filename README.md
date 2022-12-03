@@ -53,11 +53,9 @@ The data used in this project is downloaded from the [Seattle City Open Data](ht
 
 * Install requirements.txt: ``` python -m pip install -r requirements.txt ```
 
-* Create the database and super user by running the following commands:
-``` python manage.py migrate ```
+* Create the database by running the following commands:
 ``` python manage.py makemigrations seattle ```
-``` python manage.py migrate seattle ```
-``` python manage.py createsuperuser ```
+``` python manage.py migrate ```
 
 * Create a superuser: ``` python manage.py createsuperuser ```
 
