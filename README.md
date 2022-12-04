@@ -30,14 +30,14 @@ The data used in this project is downloaded from the [Seattle City Open Data](ht
 
 * [Django Web Framework](https://www.djangoproject.com/)
 
-* [django-import-export](https://django-import-export.readthedocs.io/en/latest/) package
+* [django-import-export](https://django-import-export.readthedocs.io/en/latest/)
 
 * [Folium](https://python-visualization.github.io/folium/)
 
 
 ### To get started with this project
 
-* Clone the repository: git clone 'https://github.com/MoustafaShaaban/Django_and_Folium.git'
+* Clone the repository: git clone https://github.com/MoustafaShaaban/Django_and_Folium.git
 
 * Change directory to Version_1 ``` cd Version_1 ```
 
@@ -73,11 +73,11 @@ Added Layer Control functionality to switch between different layers.
 
 Changed the default style of the Markers and used font awesome icons:
 
-    * ` h-square ` icon for Hospitals Layer.
-    * ` graduation-cap ` icon for Public Schools Layer.
-    * ` book ` icon for Public Libraries Layer.
+    * ` h-square ` Icon for Hospitals Layer.
+    * ` graduation-cap ` Icon for Public Schools Layer.
+    * ` book ` Icon for Public Libraries Layer.
 
 
 ### Version 2 Preview
 
-* [Youtube](https://www.youtube.com/watch?v=eU8r5l9-6JE
+* [Youtube](https://www.youtube.com/watch?v=eU8r5l9-6JE)
