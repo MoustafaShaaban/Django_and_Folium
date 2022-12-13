@@ -3,6 +3,8 @@
 
 ###  Project Goals
 
+* Use Django admin site to import data from different sources (CSV, JSON, ...) into the database.
+
 * Use the power of Folium to visualize data generated from Django Database on a Leaflet JS map.
 
 * Use Django Admin Site to Import and Export data into and from the database.
