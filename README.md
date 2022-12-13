@@ -32,14 +32,14 @@ The data used in this project is downloaded from the [Seattle City Open Data](ht
 
 * [Django Web Framework](https://www.djangoproject.com/)
 
-* [django-import-export](https://django-import-export.readthedocs.io/en/latest/) package
+* [django-import-export](https://django-import-export.readthedocs.io/en/latest/)
 
 * [Folium](https://python-visualization.github.io/folium/)
 
 
 ### To get started with this project
 
-* Clone the repository: git clone 'https://github.com/MoustafaShaaban/Django_and_Folium.git'
+* Clone the repository: git clone https://github.com/MoustafaShaaban/Django_and_Folium.git
 
 * Change directory to Version_1 ``` cd Version_1 ```
 
@@ -64,3 +64,22 @@ The data used in this project is downloaded from the [Seattle City Open Data](ht
 * Login to the admin site with your super user and add the data in 'seattle/data' folder using the import functionality in each model.
 
 * Run the project: ``` python manage.py runserver ```
+
+------------------------------------------------------------------------------------------------------------
+
+# Version 2:
+
+In this version I improved the code by combining all the data in one Django Function View to show it in one map.
+
+Added Layer Control functionality to switch between different layers.
+
+Changed the default style of the Markers and used font awesome icons:
+
+    * ` h-square ` Icon for Hospitals Layer.
+    * ` graduation-cap ` Icon for Public Schools Layer.
+    * ` book ` Icon for Public Libraries Layer.
+
+
+### Version 2 Preview
+
+* [Youtube](https://www.youtube.com/watch?v=eU8r5l9-6JE)
