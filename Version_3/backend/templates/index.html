@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Homepage{% endblock title %}
+
+{% block homepage %}
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Seattle Public School Data
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    This data is downloaded from Seattle Open Data portal <strong>Seattle Open Data portal</strong> you can find the dataset link <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/public-schools/explore">Here</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Seattle Public Libraries Data
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    This data is downloaded from Seattle Open Data portal <strong>Seattle Open Data portal</strong> you can find the dataset link <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/seattle-public-libraries/explore">Here</a>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Seattle Hospitals Data
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    This data is downloaded from Seattle Open Data portal <strong>Seattle Open Data portal</strong> you can find the dataset link <a href="https://data-seattlecitygis.opendata.arcgis.com/datasets/hospitals/explore">Here</a> 
+                </div>
+            </div>
+        </div>
+    </div
+{% endblock homepage %}
+
+
+{% block carousel %}
+    <!-- Start Carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active container">
+                <img src="{% static 'images/seattle_public_libraries_simple_markers.jpg' %}" class="container d-block w-70" alt="Folium Simple Markers">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="text-dark fs-1">Simple Markers</h5>
+                    <p class="text-dark fs-3">An Example of using Folium's Simple markers to visualize data returned from a Django Database.</p>
+                </div>
+            </div>
+            <div class="carousel-item container">
+                <img src="{% static 'images/seattle_public_libraries_marker_cluster.jpg' %}" class="container d-block w-70" alt="Folium Marker Cluster">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="text-dark fs-1">Markers Cluster</h5>
+                    <p class="text-dark fs-3">An Example of using Folium's Marker Cluster to visualize data returned from a Django Database.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- End Carousel -->
+{% endblock carousel %}

@@ -83,3 +83,27 @@ Changed the default style of the Markers and used font awesome icons:
 ### Version 2 Preview
 
 * [Youtube](https://www.youtube.com/watch?v=eU8r5l9-6JE)
+
+------------------------------------------------------------------------------------------------------------
+
+# Version 3:
+
+In this version I added the support of Importing and Exporting the data from the website directly (without using the Django Admin Site).
+
+
+
+### Version 3 Preview
+
+* [Youtube](https://www.youtube.com/watch?v=ZdYvfzODhZg)
+
+* [GIF](./Version_3/Version_3.gif)
+
+
+
+## References:
+
+* [django-import-export](https://django-import-export.readthedocs.io/en/latest/)
+
+* [django.how](https://django.how/admin/django-export-import-data/)
+
+*[django-bootstrap-messages](https://ordinarycoders.com/blog/article/django-messages-framework)
