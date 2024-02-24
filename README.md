@@ -7,8 +7,6 @@
 
 * Use the power of Folium to visualize data generated from Django Database on a Leaflet JS map.
 
-* Use Django Admin Site to Import and Export data into and from the database.
-
 * Visualize data using Folium's Simple Markers and Marker Cluster.
 
 
