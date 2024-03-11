@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Import Feature Data{% endblock title %}
+
+
+{% block content %}
+    <div class="text-secondary px-4 py-5 text-center">
+        <div class="py-5">
+          <h1 class="display-5 fw-bold">Select a File to Import</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="fs-5 mb-4">
+                Make sure that the file you want to import has the following columns:
+            </p>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-info">name: The name of the Featue which will be displayed in the tooltip</li>
+                <li class="list-group-item list-group-item-info">type: The type of the feature which will also be displayed in the tooltip</li>
+                <li class="list-group-item list-group-item-info">description: The description of the feature which will be displayed in the popup</li>
+                <li class="list-group-item list-group-item-info">latitude</li>
+                <li class="list-group-item list-group-item-info">longitude</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
+    {% if messages %}
+    {% endif %}
+    <form class="mt-3" action="{% url 'geoapp:import-data' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div>
+            <label for="formFileLg" class="form-label">Select a file to load (.json, .csv)</label>
+            <input class="form-control form-control-lg" type="file" name="importData" accept="json, csv, xlsx, xls">
+        </div>
+        <button class="btn btn-success mt-2" type="submit">Import</button>
+    </form>
+
+    <a class="btn btn-primary mt-4" href="{% url 'geoapp:index' %}">Go to the Map</a><br />
+{% endblock content %}

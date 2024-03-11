@@ -86,11 +86,14 @@ THIRD_PARTY_APPS = [
     "rest_framework.authtoken",
     "corsheaders",
     "drf_spectacular",
+    'import_export',
 ]
 
 LOCAL_APPS = [
     "django_and_folium.users",
     # Your stuff: custom apps go here
+    "django_and_folium.seattle",
+    "django_and_folium.geo_app",
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS

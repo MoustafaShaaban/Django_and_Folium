@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-4">
+            <form action="{% url 'geoapp:create-feature' %}" method="post">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-primary mt-2" type="submit">Import</button>
+            </form>
+        </div>
+        <div class="col-8">
+            {{ map|safe }}
+        </div>
+    </div>
+{% endblock content %}

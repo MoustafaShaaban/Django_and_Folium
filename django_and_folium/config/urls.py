@@ -10,8 +10,12 @@ from drf_spectacular.views import SpectacularAPIView
 from drf_spectacular.views import SpectacularSwaggerView
 from rest_framework.authtoken.views import obtain_auth_token
 
+
+
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    #path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path("", include("django_and_folium.geo_app.urls", namespace='geo_app')),
+    path("seattle/", include("django_and_folium.seattle.urls", namespace='seattle')),
     path(
         "about/",
         TemplateView.as_view(template_name="pages/about.html"),

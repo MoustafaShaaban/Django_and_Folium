@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Export Schools Data{% endblock title %}
+
+
+{% block content %}
+    <h3>Export Schools Data</h3>
+    <form action="{% url 'geoapp:export-data' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>Please select the format of the exported file</p>
+        <select name="file-format" class="form-select" aria-label="Default select example">
+            <option selected>Choose format...</option>
+            <option>CSV</option>
+            <option>JSON</option>
+            <option>XLS (Excel)</option>
+        </select>
+        <button class="btn btn-primary mt-2" type="submit">Export</button>
+    </form>
+
+    <a href="{% url 'geoapp:index' %}" class="mt-2">Return Home View</a><br />
+{% endblock content %}
