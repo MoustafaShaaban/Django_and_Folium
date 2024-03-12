@@ -3,17 +3,17 @@
 {% block title %}Import Hospitals Data{% endblock title %}
 
 
-{% block homepage %}
+{% block content %}
     <h3>Import Hospitals Data</h3>
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
         <li{% if message.tags %} class="alert {{ message.tags }}"{% endif %}>{{ message }}</li><br>
-        Click <a href="{% url 'index' %}">here</a> to view the full map
+        Click <a href="{% url 'seattle:index' %}">here</a> to view the full map
         {% endfor %}
     </ul>
     {% endif %}
-    <form class="mt-3" action="{% url 'import-hospitals-data' %}" method="post" enctype="multipart/form-data">
+    <form class="mt-3" action="{% url 'seattle:import-hospitals-data' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <input type="file" name="importData">
         <p>Please select the format of the file</p>
@@ -26,5 +26,5 @@
         <button class="btn btn-primary" type="submit">Import</button>
     </form>
 
-    <a href="{% url 'index' %}">Return Home View</a><br />
-{% endblock homepage %}
+    <a href="{% url 'seattle:index' %}">Return Home View</a><br />
+{% endblock content %}

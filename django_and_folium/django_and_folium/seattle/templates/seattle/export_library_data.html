@@ -5,7 +5,7 @@
 
 {% block homepage %}
     <h3>Export Libraries Data</h3>
-    <form action="{% url 'export-libraries-data' %}" method="post" enctype="multipart/form-data">
+    <form action="{% url 'seattle:export-libraries-data' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <p>Please select the format of the file</p>
         <select name="file-format" class="form-control my-3">
@@ -17,5 +17,5 @@
         <button class="btn btn-primary" type="submit">Export</button>
     </form>
 
-    <a href="{% url 'index' %}">Return Home View</a><br />
+    <a href="{% url 'seattle:index' %}">Return Home View</a><br />
 {% endblock homepage %}
