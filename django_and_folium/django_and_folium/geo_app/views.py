@@ -51,6 +51,10 @@ class CreateFeature(LoginRequiredMixin, generic.CreateView):
     template_name = 'geoapp/create_feature.html'
     success_url = reverse_lazy('geoapp:index')
 
+    def form_valid(self, form):
+        form.instance.owner = self.request.user
+        return super().form_valid(form)
+
     def get_context_data(self, **kwargs):
         map = folium.Map(
         tiles='cartodbdark_matter',
@@ -98,23 +102,23 @@ def export_data(request):
         file_format = request.POST.get('file-format')
         feature_resource = FeatureResource()
         dataset = feature_resource.export()
-        
+
 
         if file_format == 'CSV':
             response = HttpResponse(dataset.csv, content_type='text/csv')
             response['Content-Disposition'] = 'attachment; filename="exported-data/data.csv"'
             return response
-        
+
         elif file_format == 'JSON':
             response = HttpResponse(dataset.json, content_type='application/json')
             response['Content-Disposition'] = 'attachment; filename="exported-data/data.json"'
             return response
-        
+
         elif file_format == 'XLS':
             response = HttpResponse(dataset.xls, content_type='application/vnd.ms-excel')
             response['Content-Disposition'] = 'attachment; filename="exported-data/data.xls"'
             return response
-    
+
     return render(request, 'geoapp/export_data.html')
 
 

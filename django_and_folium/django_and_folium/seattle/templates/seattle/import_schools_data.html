@@ -3,7 +3,7 @@
 {% block title %}Import Schools Data{% endblock title %}
 
 
-{% block homepage %}
+{% block content %}
     <h3>Import Schools Data</h3>
     {% if messages %}
     <ul class="messages">
@@ -27,4 +27,4 @@
     </form>
 
     <a href="{% url 'seattle:index' %}">Return Home View</a><br />
-{% endblock homepage %}
+{% endblock content %}

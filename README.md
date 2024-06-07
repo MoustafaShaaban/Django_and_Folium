@@ -5,6 +5,8 @@
 
 * Use Django admin site to import data from different sources (CSV, JSON, ...) into the database.
 
+* Importing and Exporting the data from the website directly (without using the Django Admin Site).
+
 * Use the power of Folium to visualize data generated from Django Database on a Leaflet JS map.
 
 * Visualize data using Folium's Simple Markers and Marker Cluster.
@@ -39,7 +41,7 @@ The data used in this project is downloaded from the [Seattle City Open Data](ht
 
 * Clone the repository: git clone https://github.com/MoustafaShaaban/Django_and_Folium.git
 
-* Change directory to Version_1 ``` cd Version_1 ```
+* Change directory to django_and_folium ``` cd django_and_folium ```
 
 * Open the terminal or CMD to create a virtual environment like Python virtual environment (venv) or pipenv and activate it.
 
@@ -51,10 +53,10 @@ The data used in this project is downloaded from the [Seattle City Open Data](ht
 
     * ``` source venv/Scripts/activate ```  *Git Bash on Windows*
 
-* Install requirements.txt: ``` python -m pip install -r requirements.txt ```
+* Install requirements.txt: ``` python -m pip install -r requirements/local.txt ```
 
 * Create the database by running the following commands:
-``` python manage.py makemigrations seattle ```
+``` python manage.py makemigrations ```
 ``` python manage.py migrate ```
 
 * Create a super user: ``` python manage.py createsuperuser ```
